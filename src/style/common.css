@@ -1,0 +1,208 @@
+@charset "utf-8";
+
+/* =======================폰트 */
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hahmlet:wght@100;400;600;800&display=swap");
+/* =======================//폰트 */
+.a {
+  fill: #402218;
+}
+.b {
+  fill: #85492e;
+}
+.c {
+  fill: #42281e;
+}
+.d {
+  fill: #271515;
+}
+.e {
+  fill: #47221f;
+}
+.f {
+  fill: #fff;
+}
+.g {
+  fill: #5c2c28;
+}
+.h {
+  fill: #373a3c;
+}
+.i {
+  fill: #111215;
+}
+.j {
+  fill: #26292f;
+}
+.k {
+  fill: #30323a;
+}
+.l {
+  fill: #7b6f5b;
+}
+.m {
+  fill: #8c80b4;
+}
+.n {
+  fill: url(#a);
+}
+.o {
+  fill: url(#b);
+}
+.p {
+  fill: url(#c);
+}
+.q {
+  fill: url(#d);
+}
+.r {
+  fill: url(#e);
+}
+.s {
+  fill: #552e1f;
+}
+.book_shelf {
+  width: 106rem;
+  height: 70rem;
+  background-color: #402218;
+
+  border: 1rem solid #6b5152;
+  border-width: 0 1rem;
+
+  margin: 0 auto;
+  margin-top: 2rem;
+
+  display: flex;
+}
+.book_shelf .line {
+  width: 25%;
+  height: 100%;
+  border: 1rem solid #6b5152;
+  border-width: 0 1rem;
+}
+.book_shelf .line .line__item {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.book_shelf .line .book_box {
+  background-color: #ffffff60;
+  background-image: linear-gradient(
+    to right,
+    #00000020 10%,
+    #00000000 10%,
+    #00000000 90%,
+    #00000020 90%,
+    #00000020 100%
+  );
+  border: 1rem solid #443435;
+  border-width: 1rem 0;
+
+  position: relative;
+  transition: all 0.2s;
+}
+.book_shelf .line .book_box:first-child {
+  border-top-width: 2rem;
+}
+.book_shelf .line .book_box:last-child {
+  border-bottom-width: 2rem;
+}
+
+.book_shelf .line .book_box::before,
+.book_shelf .line .book_box::after {
+  content: "";
+  display: block;
+  height: calc(100% + 4rem);
+  width: 2rem;
+
+  position: absolute;
+  top: -2rem;
+
+  opacity: 0;
+}
+.book_shelf .line .book_box::before {
+  left: -2rem;
+}
+.book_shelf .line .book_box::after {
+  right: -2rem;
+}
+.book_shelf .line .book_box:hover:before,
+.book_shelf .line .book_box:hover:after {
+  opacity: 1;
+}
+
+.book_shelf .line .book_box a {
+  width: 100%;
+  height: 100%;
+  font-size: 0;
+  outline: none;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+
+  position: relative;
+}
+
+.book_shelf .line .book_box.normal {
+  height: 20%;
+  background-image: url(../assets/1.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: left calc(100% + 1rem);
+
+  position: relative;
+}
+.book_shelf .line .book_box.mini {
+  height: 14%;
+  background-image: url(../assets/2.png);
+  background-repeat: no-repeat;
+  background-size: auto 98%;
+  background-position: left calc(100% + 1rem);
+
+  position: relative;
+}
+.book_shelf .line .book_box:last-child.mini {
+  height: calc(14% + 2rem);
+}
+
+.book_shelf .line .book_box.middle {
+  height: 24%;
+  background-image: url(../assets/1.png);
+  background-repeat: no-repeat;
+  background-size: 98% auto;
+  background-position: left calc(100% + 1rem);
+
+  position: relative;
+}
+
+.book_shelf .line .book_box.normal:after,
+.book_shelf .line .book_box.mini:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  opacity: 1;
+}
+.book_shelf .line .book_box.before {
+  border-bottom: 0;
+}
+.book_shelf .line .book_box.after {
+  border-top: 0;
+}
+
+.box_title {
+  width: 80%;
+  height: 4rem;
+  position: absolute;
+  top: 50%;
+  top: -1rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 49;
+}
